@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食小舖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>美食小舖</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#menu">菜單</a></li>
+                    <li><a href="#info">相關資訊</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="fade-in">
+        <div class="section-content">
+            <h2>探索最新美食，品味世界風味</h2>
+            <p>發現來自世界各地的美味料理，讓您的味蕾展開冒險之旅。</p>
+        </div>
+    </section>
+
+    <section id="menu" class="fade-in">
+        <h2>菜單</h2>
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="https://img.ltn.com.tw/Upload/food/page/2016/11/25/161125-4960-000-4WQJH.jpg" alt="美食1">
+                <p>香煎牛排</p>
+            </div>
+            <div class="image-item">
+               <img src="https://d3l76hx23vw40a.cloudfront.net/recipe/webp/aa010-016.webp" alt="美食2">
+                <p>紅豆餅</p>
+            </div>
+            <div class="image-item">
+                <img src="https://tw.savorjapan.com/gg/content_image/t0052_001_20180122023039.jpg" alt="美食3">
+                <p>日式壽司</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="fade-in">
+        <h2>相關資訊</h2>
+        <p>在這裡，您可以找到關於我們餐廳的最新動態、菜單更新。</p>
+        <ul>
+            <li><a href="#">如何選擇搭配酒品</a></li>
+            <li><a href="#">最新季節限定菜單</a></li>
+            <li><a href="#">關於我們的料理來源</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy;B12090066製作 </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #FF5733; 
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FF5733;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-item {
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.05); 
+}
+
+.image-item p {
+    padding: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    text-align: center;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #FF5733;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
